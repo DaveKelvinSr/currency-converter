@@ -1,0 +1,54 @@
+<!DOCYTPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Converter</title>
+
+		<link rel="stylesheet" media="all" type="text/css" href="css/converter.css">
+		<script src="js/converter.js"></script>
+		<script src="js/sw/sw.js"></script>
+		
+		<script src="libraries/jquery-3.3.1.js"></script>
+		
+	</head>
+	<body>
+		<header>
+			Currency Converter
+		</header>
+		<main id="convertScreen">
+		<form method="post">
+			<div class="formRow">
+				<div class="grid_quarter">
+					<label for="currency1">Currency to be converted:</label>
+					<input required autofocus autocomplete="off" name="currency1" id="currency1" class="validated" type="number" step="0.01" pattern="[0-9() ]{1,20}"/>
+				</div>
+				<div class="grid_quarter">
+					<label for="rate">Rate:</label>
+					<input required autocomplete="off" name="rate" id="rate" class="validated" type="number" step="0.0001" pattern="[0-9() ]{1,5}"/>
+				
+				</div>
+			</div>
+			<div class="formRow">
+				<input style="width:70px" type="submit" value="Convert"/>
+			</div>
+		</form>
+		<label>New currency: </label>
+		<div id="currency2">		
+		</div>
+		<template id="currencyOut">
+			<div data-property-name="currency2"></div>
+		</template>
+		</main>
+
+		<footer>
+			Copyright 2018
+		</footer>
+	</body>
+	
+	<script>
+		var mainElement = document.getElementById('convertScreen');
+		var appScreen = convertScreen(mainElement);
+		appScreen.init();
+	</script>
+
+</html>

@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, san-serif;
+	color: #333333;
+}
+
+header {
+	background: #3F51B5;
+	color: white;
+	text-align: left;
+	line-height: 3.0em;
+	font-size: 1.5em;
+	padding: 0 0 0 0.5em;
+	margin: 0 0 0.5em 0;
+}
+
+footer {
+	background: #FFFFFF;
+	color: white;
+	text-align: center;
+	line-height: 2em;
+	font-size: 0.8em;
+}
+
+label {
+	width: 15em;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0.5em;
+}
+
+input {
+	width: 20em;
+}
+
+.formRow {
+	margin-bottom: 1.5em
+}
+
+.validated:invalid {
+	background: #C9CFFF;
+}
+.validated:valid {
+	background: #FCFFFF;
+}
